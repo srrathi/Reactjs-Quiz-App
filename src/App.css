@@ -70,8 +70,8 @@ input::placeholder {
   height: 50px;
   font-size: 20px;
 }
-.options button:active{
-  background-color: #83b313;
+.options button:focus{
+  background-color: #b1a612!important;
 }
 .pb{
   background-color: #1289d8;
