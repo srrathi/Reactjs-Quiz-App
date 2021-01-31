@@ -6,7 +6,7 @@ export const Quiz = () => {
     const [currQues, setCurrQues] = useState(0);
     const [optionChosen, setOptionChosen] = useState("");
     const { score, setScore, setGameState } = useContext(QuizContext);
-
+    // var dataRef = db.ref('Data');
 
     const nextQuestion = () => {
         if (Questions[currQues].answer === optionChosen) {
@@ -16,13 +16,20 @@ export const Quiz = () => {
         // alert(score)
     };
 
-    const finishQuiz = ()=>{
+    const finishQuiz = () => {
         if (Questions[currQues].answer === optionChosen) {
             setScore(score + 1);
         }
+        // sendData();
         setGameState("endScreen");
-        
     }
+    // const sendData = () =>{
+    //     var newDataRef = dataRef.push();
+    //     newDataRef.set({
+    //         "name": name,
+    //         "score": score,
+    //     });
+    // }
     return (
         <div className="item-row">
             <h2 className="ques">{Questions[currQues].prompt}</h2>
@@ -41,7 +48,7 @@ export const Quiz = () => {
                 </button>
             </div>
             {currQues === Questions.length - 1 ? (
-                <button className="btn btn-info btn-finish" onClick={finishQuiz}>Finish Quiz</button>
+                <button className="btn btn-info btn-finish" onClick={()=> {finishQuiz();}}>Finish Quiz</button>
             ) : (
                     <button className="btn btn-info pb" onClick={nextQuestion}>Next Question</button>
                 )}
