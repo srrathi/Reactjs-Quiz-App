@@ -102,3 +102,43 @@ input::placeholder {
   font-weight: bold;
   text-transform: uppercase;
 }
+.btn-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 5px 5px 5px;
+}
+.btn-div button{
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #906abd!important;
+  border-color: #906abd!important;
+  color: #fff;
+}
+.panel{
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 3px;
+  color: #000;
+  font-size: 16px;
+  box-shadow: 0px -1px 10px -4px rgba(0, 0, 0, 0.75);
+}
+.timer{
+  text-align: right;
+  margin: 0px;
+  margin-bottom: 20px;
+}
+.timer h1{
+  font-size: 15px;
+  color: rgb(5, 5, 5);
+}
+@media only screen and (max-width: 600px){
+  .center-column{
+    width: 450px;
+  }
+  .btn-div button{
+    margin: 1px;
+    margin: 0;
+  }
+}
